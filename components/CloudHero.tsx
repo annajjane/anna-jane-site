@@ -20,12 +20,13 @@ export function CloudHero() {
 
   return (
     <section
-      className="cloud-hero sticky top-0 z-10 flex min-h-dvh w-full items-center justify-center overflow-hidden bg-[#1e3344] isolate"
+      className="cloud-hero sticky top-0 z-10 flex min-h-dvh w-full items-center justify-center overflow-hidden bg-[#1e3344] isolate max-md:items-end max-md:pb-[min(28vh,240px)] md:pb-0"
       aria-label="ANNAJJANE"
     >
       {/* 1. Background — Next/Image for cleaner scaling than CSS bg; GPU layer for crisp compositing */}
+      {/* Mobile: taller layer + translate up pans the crop so lower sky / clip-adjacent tone sits behind the title */}
       <div
-        className="pointer-events-none absolute inset-x-0 top-0 z-0 h-dvh w-full overflow-hidden"
+        className="pointer-events-none absolute inset-x-0 top-0 z-0 w-full overflow-hidden h-dvh max-md:h-[calc(100dvh+12vh)] max-md:-translate-y-[7vh] md:translate-y-0"
         aria-hidden
       >
         <Image
@@ -35,8 +36,7 @@ export function CloudHero() {
           priority
           unoptimized
           sizes="100vw"
-          className="object-cover [transform:translateZ(0)] contrast-[1.09] saturate-[1.07] brightness-[0.995]"
-          style={{ objectPosition: "center 44%" }}
+          className="object-cover object-[94%_52%] md:object-[50%_44%] [transform:translateZ(0)] contrast-[1.09] saturate-[1.07] brightness-[0.995]"
         />
       </div>
 
