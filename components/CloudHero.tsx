@@ -30,7 +30,7 @@ export function CloudHero() {
         aria-hidden
       >
         <Image
-          src="/cloud-bg.png"
+          src="/cloud-bg.png?v=3"
           alt=""
           fill
           priority
